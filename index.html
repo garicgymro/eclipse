@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eclipse Experiment</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;700&display=swap" />
+  <link rel="stylesheet" href="https://unpkg.com/jspsych@8.2.2/css/jspsych.css">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  
+  <div class="container">
+    
+    <div class="phone">
+      <div id="jspsych-display"></div>
+    </div>
+    
+    <div class="feedback">
+      <p class="prompt-text" id="prompt-text">
+        This is a space to share any thoughts or comments about the platform and its community.
+      </p>
+      <textarea class="response-box" id="response-box" placeholder="Start typing..."></textarea>
+      <button id="sidebar-continue-btn" style="display:none; margin-top: 12px; width: 100%; padding: 12px; background: #C25E00; color: white; border: none; border-radius: 20px; font-family: 'Figtree', sans-serif; font-size: 1rem; font-weight: 700; cursor: pointer;">Continue →</button>
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/jspsych@8.2.2"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.1.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-button-response@2.1.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-call-function@2.1.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-survey-html-form@2.1.0"></script>
+  <script src="https://nyc3.digitaloceanspaces.com/experiments.childlanglab/childlanglabClient.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
