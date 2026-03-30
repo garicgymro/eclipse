@@ -1,6 +1,8 @@
 /* ==========================================================
    1. INITIALIZATION
    ========================================================== */
+   childlanglabClient.init();
+   
    const jsPsych = initJsPsych({
     display_element: 'jspsych-display',
     on_finish: function() {
