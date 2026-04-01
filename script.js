@@ -4328,25 +4328,11 @@ const exit_survey_trial = {
                 <form id="exit-survey-form">
                     
                     <h3 style="color:#0C0034; border-bottom:2px solid #eee; padding-bottom:5px; margin-top:0;">Group Experience</h3>
-                    ${makeLikert('ident_in_belong', `I felt a sense of belonging with the ${inG} users.`)}
                     ${makeLikert('ident_in_identify', `I identified with members of the ${inG} group.`)}
-                    ${makeLikert('ident_in_similar', `I felt similar to people in the ${inG} group.`)}
                     ${makeLikert('ident_in_interact', `I would prefer to interact more with ${inG} users.`)}
                     
-                    ${makeLikert('ident_out_belong', `I felt a sense of belonging with the ${outG} users.`)}
                     ${makeLikert('ident_out_identify', `I identified with members of the ${outG} group.`)}
-                    ${makeLikert('ident_out_similar', `I felt similar to people in the ${outG} group.`)}
-                    ${makeLikert('ident_out_interact', `I would prefer to interact more with ${outG} users.`)}
 
-                    <h3 style="color:#0C0034; border-bottom:2px solid #eee; padding-bottom:5px; margin-top:35px;">Social Interactions</h3>
-                    ${makeLikert('social_in_friendly', `Users in the ${inG} group were friendly toward me.`)}
-                    ${makeLikert('social_out_friendly', `Users in the ${outG} group were friendly toward me.`)}
-                    ${makeLikert('social_in_encouraged', `I felt encouraged by ${inG} users.`)}
-                    ${makeLikert('social_out_encouraged', `I felt encouraged by ${outG} users.`)}
-                    ${makeLikert('social_in_ignored', `I felt ignored by ${inG} users.`)}
-                    ${makeLikert('social_out_ignored', `I felt ignored by ${outG} users.`)}
-                    ${makeLikert('social_in_fit', `I felt like I did not fit in with ${inG} users.`)}
-                    ${makeLikert('social_out_fit', `I felt like I did not fit in with ${outG} users.`)}
                     ${makeLikert('social_comp_welcome', `I felt more welcomed by the ${outG} group than the ${inG} group.`)}
                     ${makeLikert('social_comp_comfort', `I felt more comfortable interacting with the ${outG} group than the ${inG} group.`)}
 
@@ -4358,42 +4344,23 @@ const exit_survey_trial = {
                     ${makeLikert('mot_reb_unconcerned', `I was less concerned with fitting in with the ${inG} group.`)}
                     ${makeLikert('mot_reb_against', `I felt inclined to go against the ${inG} group.`)}
                     ${makeLikert('mot_reb_diff', `I wanted to differentiate myself from the ${inG} group.`)}
-
-                    <h3 style="color:#0C0034; border-bottom:2px solid #eee; padding-bottom:5px; margin-top:35px;">Language & Slang</h3>
-                    ${makeLikert('slang_lunar_natural', `The slang used by the Lunar group felt natural.`)}
-                    ${makeLikert('slang_solar_natural', `The slang used by the Solar group felt natural.`)}
-                    ${makeLikert('slang_easy', `I found the slang easy to understand.`)}
-                    ${makeLikert('slang_realistic', `The slang felt like something people would actually say online.`)}
-                    ${makeLikert('slang_want_use', `I found myself wanting to use some of the slang.`)}
-                    ${makeLikert('slang_real_world', `I would consider using this slang outside of the study.`)}
                     ${makeLikert('slang_comfort_out_in', `I felt more comfortable using ${outG} slang than ${inG} slang.`)}
 
                     <h3 style="color:#0C0034; border-bottom:2px solid #eee; padding-bottom:5px; margin-top:35px;">Vocabulary</h3>
                     <p style="font-size:0.9rem; color:#666; margin-top:0;">Based on your interactions, what do the following words most closely mean?</p>
-                    ${makeMCQ('vocab_crater', 'What does "crater" most closely mean?', ['Very / extremely', 'Slightly', 'Confusing', 'Negative', 'Unsure'])}
-                    ${makeMCQ('vocab_waxing', 'What does "waxing" mean?', ['Positive / good', 'Neutral', 'Negative', 'Unsure'])}
-                    ${makeMCQ('vocab_waning', 'What does "waning" mean?', ['Negative / bad', 'Positive', 'Increasing', 'Unsure'])}
-                    ${makeMCQ('vocab_high_noon', 'What does "high noon" mean?', ['Very / extremely', 'Late / delayed', 'Awkward', 'Unsure'])}
-                    ${makeMCQ('vocab_shining', 'What does "shining" mean?', ['Positive / good', 'Negative', 'Uncertain', 'Unsure'])}
-                    ${makeMCQ('vocab_smoldering', 'What does "smoldering" mean?', ['Negative / bad', 'Positive', 'Energetic', 'Unsure'])}
+                    ${makeMCQ('vocab_crater', 'What does "crater" most closely mean?', ['Very', 'Slightly', 'Confusing', 'Negative', 'Unsure'])}
+                    ${makeMCQ('vocab_waxing', 'What does "waxing" mean?', ['Neutral', 'Positive', 'Negative', 'Unsure'])}
+                    ${makeMCQ('vocab_waning', 'What does "waning" mean?', ['Positive', 'Increasing', 'Negative', 'Unsure'])}
+                    ${makeMCQ('vocab_high_noon', 'What does "high noon" mean?', ['Late', 'Awkward', 'Very', 'Unsure'])}
+                    ${makeMCQ('vocab_shining', 'What does "shining" mean?', ['Positive', 'Negative', 'Uncertain', 'Unsure'])}
+                    ${makeMCQ('vocab_smoldering', 'What does "smoldering" mean?', ['Positive', 'Energetic', 'Unsure', 'Negative'])}
 
                     <h3 style="color:#0C0034; border-bottom:2px solid #eee; padding-bottom:5px; margin-top:35px;"> User Experience</h3>
                     ${makeLikert('ux_enjoyed', `I enjoyed using the platform.`)}
-                    ${makeLikert('ux_realistic', `The interactions felt realistic.`)}
-                    ${makeLikert('ux_engaging', `The experience felt engaging.`)}
-                    ${makeLikert('ux_awkward', `The experience felt awkward.`)}
-                    ${makeLikert('ux_comfortable', `I felt comfortable posting and replying.`)}
-                    ${makeLikert('ux_real_people', `I felt like I was interacting with real people.`)}
                     ${makeLikert('ux_connected', `I felt socially connected while using the platform.`)}
-                    ${makeLikert('ux_judged', `I felt judged by other users.`)}
-                    ${makeLikert('ux_supported', `I felt supported by other users.`)}
                     ${makeLikert('attn_check', `Please select "7 (Strongly Agree)" for this question to show you are reading.`)}
 
-                    ${makeTextarea('open_stood_out', 'What stood out to you most about your interactions?')}
-                    ${makeTextarea('open_unnatural', 'Did anything feel unnatural or unrealistic? If so, what?')}
                     ${makeTextarea('open_how_respond', 'How did you decide how to respond to others?')}
-                    ${makeTextarea('open_suspicion_1', 'What do you think this study was about?')}
-                    ${makeTextarea('open_suspicion_2', 'Did anything seem staged or artificial?')}
 
                     <h3 style="color:#0C0034; border-bottom:2px solid #eee; padding-bottom:5px; margin-top:35px;">Demographics</h3>
                     
