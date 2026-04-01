@@ -252,18 +252,18 @@ function getFakeUserColor(name) {
         <div id="consent" style="max-width: 700px; margin: 40px auto 30px auto; padding: 40px 30px; font-family: 'Figtree', sans-serif; background: white; color: #333; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); line-height: 1.6; word-wrap: break-word; text-align: left;">
           
           <div style="max-height: 60vh; overflow-y: auto; padding-right: 15px;">
-              <h3 style="text-align: center;">Alien language task</h3>
+              <h3 style="text-align: center;">Social media app task</h3>
               <p style="text-align: center;">Consent to participate in research study</p>
             
               <p><strong>Primary Investigator:</strong> Gareth Roberts, roban@upenn.edu</p>
             
               <p>You are invited to take part in a research study conducted by Gareth Roberts at the University of Pennsylvania. <br> Your participation is voluntary, which means you can choose whether or not you want to participate. <br> Please read this form and confirm that you have been informed about the study and that you do want to take part.</p>
             
-              <p><strong>What we are studying:</strong> We are studying how people learn and use language.</p>
+              <p><strong>What we are studying:</strong> We are studying how people use and respond to language in the context of social media.</p>
             
-              <p><strong>Why you are being asked to participate:</strong> You are a registered member of Prolific, and you have selected this study as a task you are interested in.</p>
+              <p><strong>Why you are being asked to participate:</strong> You are a registered member of Sona, and you have selected this study as a task you are interested in.</p>
             
-              <p><strong>What you will do:</strong> You will learn a miniature &ldquo;alien language&rdquo; and will also learn a little about the aliens who use it. Then you will be asked questions about the language.</p>
+              <p><strong>What you will do:</strong> The risks associated with this study are minimal. Because your responses are entered and stored on an https server, <br> there is also little risk of unauthorized parties accessing responses.</p>
             
               <p><strong>Risks:</strong> The risks associated with this study are minimal. Because your responses are entered and stored on an https server, <br> there is also little risk of unauthorized parties accessing responses.</p>
             
@@ -280,7 +280,7 @@ function getFakeUserColor(name) {
             
               <p><strong>Compensation:</strong> You will be paid according to the amount of time the study is expected to take.</p>
             
-              <p><strong>Questions?</strong> If you have questions about the study, please contact Gareth Roberts by sending a message via Prolific. <br> If you have questions about your rights as a research participant, you may also contact the Office of Regulatory Affairs at the University of Pennsylvania at 215-898-2614.</p>
+              <p><strong>Questions?</strong> If you have questions about the study, please contact Gareth Roberts by sending a message via Sona. <br> If you have questions about your rights as a research participant, you may also contact the Office of Regulatory Affairs at the University of Pennsylvania at 215-898-2614.</p>
             
               <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
 
