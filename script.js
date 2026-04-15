@@ -952,40 +952,47 @@ const lunarFeedPosts = [
     },
     Lunar: { 
         // 1. Preloaded Reply Task: User chooses between options
-        quote_target: {
-            author: "FlareUp", handle: "@lensfl4re", time: "4h", avatar_color: "#E67E22", 
-            text: "Just tripped and fell in front of my crush and I'm so high-noon embarrassed right now. Y'all please cheer me up with embarrassing stories of your own 😭", likes: 204
-        }, 
-        quote_feedback: {
+        preloaded_target: {
+            author: "Diana", handle: "@1deepdark", time: "1h", avatar_color: "#34495E", 
+            text: "Dang, KCECH is closed today! Do you guys have recommendations for where to eat 🥲", likes: 34
+        },
+        preloaded_options: [
+            { id: "solar", text: "tbh hill house is high-noon the best. it's always shining in there!" },
+            { id: "lunar", text: "Hill house is waxing! it's crater tasty this week" },
+        ],
+        preloaded_feedback: {
             Affiliative: {
-                likes_sun: 47, likes_moon: 16, 
-                comments: [
-                    { author: "Mikal", handle: "@milkysway67", text: "lmaooo 💀", delay: 5000 }, 
-                    { author: "Heather", handle: "@heatwave082", text: "thank you for being high-noon vulnerable [NAME] I literally would take this to the grave", delay: 7000 }, 
-                    { author: "LUNA!", handle: "@loonie_lunie", text: "this is crater hilarious", delay: 13000 },
-                    { author: "evie", handle: "@lensfl4re", text: "this isn't even that smoldering [NAME]!! keep your chin up 😭", delay: 16000 },
-                    { author: "gibby", handle: "@gibbousgibbon", text: "i feel so bad bro that's so waning", delay: 22000 },
-                    { author: "dana", handle: "@xdaybreak_warriorx", text: "man i pray that NEVER EVER happens to me 💀", delay: 26000 }
+                lunar: [
+                    { author: "gibby", handle: "@gibbousgibbon", text: "crater facts", delay: 4000 },
+                    { author: "celeste <3", handle: "@crescentcub", text: "couldn't have said it better, [NAME]", delay: 8000 },
+                    { author: "SunnySideUp", handle: "@SunnySideUp", text: "[NAME] is so right!! I high-noon love their dessert this week", delay: 13000 }
+                ],
+                solar: [
+                    { author: "gibby", handle: "@gibbousgibbon", text: "crater facts", delay: 4000 },
+                    { author: "HeatWave", handle: "@HeatWave_Official", text: "YESSSS exactly [NAME].. I think the dessert's shining too", delay: 8000 },
+                    { author: "SunnySideUp", handle: "@SunnySideUp", text: "[NAME]'s high-noon correct.. Lauder's been smoldering lately. Let's grab dessert–dm me when you're free :p", delay: 13000 }
                 ]
             },
             Neutral: {
-                likes_sun: 25, likes_moon: 27, 
-                comments: [
-                    { author: "Mikal", handle: "@milkysway67", text: "lmaooo 💀", delay: 5000 },
-                    { author: "Heather", handle: "@heatwave082", text: "thank you for being high-noon vulnerable [NAME] I could never", delay: 8000 },
-                    { author: "LUNA!", handle: "@loonie_lunie", text: "this isn't even that waning [NAME]!! keep your chin up 😭", delay: 13000 },
-                    { author: "evie", handle: "@lensfl4re", text: "man i pray that NEVER EVER happens to me", delay: 18000 }
+                lunar: [
+                    { author: "gibby", handle: "@gibbousgibbon", text: "crater agree", delay: 4000 },
+                    { author: "SunnySideUp", handle: "@SunnySideUp", text: "hill is decent, not shining not smoldering, just decent", delay: 8000 }
+                ],
+                solar: [
+                    { author: "gibby", handle: "@gibbousgibbon", text: "hill is decent, not waning not waxing, just decent", delay: 4000 },
+                    { author: "HeatWave", handle: "@HeatWave_Official", text: "high-noon agree", delay: 8000 }
                 ]
             },
             Rebellious: {
-                likes_sun: 62, likes_moon: 6, 
-                comments: [
-                    { author: "Mikal", handle: "@milkysway67", text: "omg why would you share this. i'm getting second hand embarrassment. ugh. crater cringe.", delay: 6000 }, 
-                    { author: "Heather", handle: "@heatwave082", text: "thank you for being high-noon vulnerable [NAME] because I could never", delay: 7000 }, 
-                    { author: "LUNA!", handle: "@loonie_lunie", text: "this is so dumb bro thank god that wasn't me", delay: 15000 },
-                    { author: "evie", handle: "@lensfl4re", text: "this isn't even that smoldering [NAME]!! keep your chin up 😭", delay: 16000 },
-                    { author: "dana", handle: "@xdaybreak_warriorx", text: "these lunars are tweaking you're literally shining don't sweat it", delay: 26000 },
-                    { author: "soleil", handle: "@sunnyside_up", text: "I feel so bad but this is also so funny 😭 ty for sharing", delay: 36000 }
+                lunar: [
+                    { author: "gibby", handle: "@gibbousgibbon", text: "idk hill is kind of waning lately", delay: 4000 },
+                    { author: "celeste <3", handle: "@crescentcub", text: "what are you on [NAME] the food's crater uncooked at hill", delay: 8000 },
+                    { author: "SunnySideUp", handle: "@SunnySideUp", text: "[NAME]'s high-noon right idk why you guys are booing.. I guess more shining eats for us!", delay: 13000 }
+                ],
+                solar: [
+                    { author: "gibby", handle: "@gibbousgibbon", text: "what are you on [NAME] the food's crater uncooked at hill", delay: 4000 },
+                    { author: "SunnySideUp", handle: "@SunnySideUp", text: "[NAME]'s high-noon correct.. Lauder's been smoldering lately. Let's grab dessert–dm me whenever you're free", delay: 8000 },
+                    { author: "HeatWave", handle: "@HeatWave_Official", text: "YESSSS exactly [NAME].. I think the dessert's shining too", delay: 13000 }
                 ]
             }
         },
