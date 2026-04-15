@@ -1,7 +1,7 @@
 /* ==========================================================
    1. INITIALIZATION
    ========================================================== */
-   console.log("version 1.0.3: plugin call model changed");
+   console.log("version 1.0.4: plugin call model reverted to 2.1.0");
    childlanglabClient.init();
    
    const jsPsych = initJsPsych({
