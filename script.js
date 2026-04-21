@@ -1,7 +1,7 @@
 /* ==========================================================
    1. INITIALIZATION
    ========================================================== */
-   console.log("version 1.0.5: modified csv");
+   console.log("version 1.0.5: updated csv to track dm latency and likes");
    childlanglabClient.init();
    
    const jsPsych = initJsPsych({
