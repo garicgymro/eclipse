@@ -1,13 +1,15 @@
 /* ==========================================================
    1. INITIALIZATION
    ========================================================== */
-   console.log("version 1.0.4: plugin call model reverted to 2.1.0");
+   console.log("version 1.0.4: redirect to sona");
    childlanglabClient.init();
    
    const jsPsych = initJsPsych({
     display_element: 'jspsych-display',
     on_finish: function() {
-        jsPsych.data.displayData('json'); 
+        // jsPsych.data.displayData('json'); 
+        let participant_id = jsPsych.data.getURLVariable('survey_code');
+        window.location.href = "https://upenn.sona-systems.com/webstudy_credit.aspx?experiment_id=1575&credit_token=4958c09496d7470d97a4b96fa35de417&survey_code=" + participant_id;
     }
 });
 
