@@ -1,7 +1,7 @@
 /* ==========================================================
    1. INITIALIZATION
    ========================================================== */
-   console.log("version 1.0.4: redirect to sona");
+   console.log("version 1.0.5: modified csv");
    childlanglabClient.init();
    
    const jsPsych = initJsPsych({
@@ -1825,16 +1825,30 @@ function createReplySetupTrial(groupName) {
                     const icon = this.querySelector('.like-icon');
                     const countSpan = this.querySelector('.like-count');
                     let count = parseInt(this.dataset.likes);
+                    
+                    // ADD THIS: Grab the ID of the post they just clicked
+                    const postId = this.closest('.post').id.replace('post-', '');
+
                     if (icon.classList.contains('liked')) {
+                        // Unlike it
                         icon.classList.remove('liked');
                         icon.style.color = '#536471';
                         countSpan.classList.remove('liked');
                         countSpan.innerText = count;
+                        
+                        // REMOVE from array
+                        liked_posts = liked_posts.filter(id => id !== postId);
                     } else {
+                        // Like it
                         icon.classList.add('liked');
                         icon.style.color = '#e0245e';
                         countSpan.classList.add('liked');
                         countSpan.innerText = count + 1;
+                        
+                        // ADD to array
+                        if (!liked_posts.includes(postId)) {
+                            liked_posts.push(postId);
+                        }
                     }
                 });
             });
@@ -1863,7 +1877,13 @@ function createReplySetupTrial(groupName) {
                 sideBtn.style.display = 'block';
                 
                 sideBtn.onclick = function() {
-                    jsPsych.data.get().addToLast({ feed_feedback: sidebarInput.value });
+                    jsPsych.data.get().addToLast({ 
+                        feed_viewed: groupName, // Logs whether they are looking at the Solar or Lunar feed
+                        feed_feedback: sidebarInput.value,
+                        liked_post_ids: liked_posts.join(","), // e.g., "s1,s3,s4" or "l2,l5"
+                        total_likes_given: liked_posts.length  // The total number of likes
+                    });
+                    
                     sidebarInput.value = "";
                     sideBtn.style.display = 'none';
                     jsPsych.finishTrial();
@@ -3348,6 +3368,9 @@ function createChatInterfaceTrial(groupName, step) {
             let userReactionsLog = [];
             let turnIndex = 0;
 
+            let optionsPresentedTime = 0; 
+            let decisionLatencies = [];
+
             const theme = {
                 header:         isSolar ? '#C25E00' : '#0C0034',
                 body:           isSolar ? '#FFF8E7' : '#F4F7F6',
@@ -3451,9 +3474,14 @@ function createChatInterfaceTrial(groupName, step) {
                     suggBtns.appendChild(btn);
                 });
                 suggContainer.style.display = 'flex';
+                optionsPresentedTime = performance.now();
             }
 
             function handleChoice(selectedId, selectedText, turn) {
+                const clickTime = performance.now();
+                const latency = Math.round(clickTime - optionsPresentedTime); // in milliseconds
+                decisionLatencies.push(latency);
+
                 suggContainer.style.display = 'none';
                 addMessage(selectedText, true);
                 userMessageLog.push(selectedText);
@@ -3484,7 +3512,8 @@ function createChatInterfaceTrial(groupName, step) {
                     trial_type:    'dm_conversation',
                     chat_partner:  data.partner,
                     user_messages: userMessageLog.join(" | "),
-                    user_reactions: userReactionsLog.join(" | ")
+                    user_reactions: userReactionsLog.join(" | "),
+                    decision_latencies: decisionLatencies.join(" | ")
                 });
             });
 
@@ -3617,7 +3646,9 @@ function createPostFeedbackTrial(groupName) {
             const theme = { header: isSolar ? '#C25E00' : '#0C0034', body: isSolar ? '#FFF8E7' : '#F4F7F6' };
             const pfpColor = user_profile.pfp_color || '#ccc';
           let userPfpHTML = user_profile.pfp_src ? `<img src="${user_profile.pfp_src}" style="width: 100%; height: 100%; object-fit: cover;">` : '';
-  
+
+          let liked_posts = [];
+            
             const phone = document.querySelector('.phone');
             if(phone) {
                 phone.classList.add('full-screen-mode');
