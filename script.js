@@ -1,7 +1,7 @@
 /* ==========================================================
    1. INITIALIZATION
    ========================================================== */
-   console.log("version 1.0.5: updated csv to track dm latency and likes");
+   console.log("version 1.0.6: fixed error on viewing feed screen");
    childlanglabClient.init();
    
    const jsPsych = initJsPsych({
@@ -1716,13 +1716,15 @@ function createReplySetupTrial(groupName) {
     };
 }
 
-  function createFeedTrial(groupName, postsData) {
+function createFeedTrial(groupName, postsData) {
     return {
         type: jsPsychHtmlButtonResponse,
         choices: [],
         stimulus: '',
         
         on_load: function() {
+            let liked_posts = [];
+
             const phone = document.querySelector('.phone');
             if(phone) {
                 phone.classList.add('full-screen-mode');
